@@ -37,7 +37,7 @@ const run = async() => {
 
 
         app.post("/bots", async(req, res)=> {
-            console.log("data from the client", req.body);
+            console.log("data from the client" , req.body);
             const newBot = req.body;
             const result= await botsCollection.insertOne(newBot);
             res.send(result);
@@ -50,6 +50,9 @@ const run = async() => {
             const result = await botsCollection.deleteOne(query);
             res.send(result)
         })
+
+
+
 
         
 
